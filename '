@@ -1,0 +1,122 @@
+import os
+from datetime import date
+from ziad_functions_submission import generate_field_list
+
+#numcells = [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
+numcells = [40, 80, 120, 160, 200, 300, 400]
+#numcells = [300]
+#numcells = [300, 400]
+#numcells = [80, 140, 180, 200]
+#numcells = [20, 40, 60, 80, 100]
+#numcells = [120, 140, 160, 180, 200]
+#numcells = [60, 80, 100, 120]
+#numcells = [40, 80, 100, 120, 140, 160, 180, 200]
+#numcells = [120, 140, 160, 180, 200]
+#numcells = [60, 80, 100, 120]
+#numcells = [40]
+#numcells = [200]
+#numcells = [2]
+#fields = [-1, 0, 1, 2, 3, 4, [3, 4], [1, 2], [0, 1, 2]]
+#fields = [[0, 10]]
+#fields = [-1, 0, 1, 2]
+fields = [2]
+#fields = [3, 4]
+#fields = [1, 2]
+#fields = [4, [3, 4]]
+#fields = [-1, 0]
+#fields = [[1, 2], [0, 1, 2]]
+#fields = [[3, 4]]
+#fields = [[5, 6]]
+#fields = [[7, 8, 9]]
+#fields = [[-1, 0]]
+
+# Fill in these parameters for every run
+duration = 120
+noise = 30
+mode = 'Quarter4'
+#power = 'equalize_peak_power'
+power = 'equalize_avg_power'
+noise_setting = 'ziad-far-neurons'
+#noise_setting = 'uncorrelated_noise'
+
+#mea = '100MEA75zlim70_'
+#mea = '100MEA75_'
+mea = 'Neuropixels-128_'
+#mea = '100MEA75zlim285_'
+#mea = '100MEA50_'
+#mea = '100MEA100_'
+#mea = ''
+
+radius = ''
+bursting = ''
+noise_radius = ''
+far_neurons = ''
+
+radius = '25-50'
+bursting = 'False'
+noise_radius = '100-200'
+far_neurons = '800'
+
+
+if radius != '':
+    radius = f'radius{radius}_'
+if bursting != '':
+    bursting = f'Bursting-{bursting}_'
+if noise_radius != '':
+    noise_radius = f'noiseradius{noise_radius}_'
+if far_neurons != '':
+    far_neurons = f'far-neurons{far_neurons}_'
+
+
+
+paths = [f'{mea}{radius}{noise_radius}{far_neurons}SomaFlattened-{power}_{bursting}{noise_setting}']
+
+if numcells[0] == 2:
+    paths = []
+    #deltas = [25, 50, 75, 100, 125, 150]
+    #deltas = [125, 150]
+    deltas = [2, 4, 6, 8, 10, 15]
+    for delta in deltas:
+        paths.append(f'{delta}Delta_{power}')
+
+def create_submit_script(cells, path):
+    field_string = create_field_string(fields)
+    date_string = str(date.today().month) + '_' + str(date.today().day)
+    with open('submit_template.sh', 'rt') as fin:
+        with open('submit_script.sh', 'wt') as fout:
+            for line in fin:
+                new_line = line.replace('%%%', str(cells))
+                new_line = new_line.replace('!!!', path)
+                new_line = new_line.replace('qqq', field_string)
+                new_line = new_line.replace('ddd', date_string)
+                new_line = new_line.replace('ttt', str(duration))
+                new_line = new_line.replace('nnn', str(noise))
+                new_line = new_line.replace('hhh', str(mode))
+                fout.write(new_line)
+
+def submit_batch():
+    os.system('sbatch submit_script.sh')
+
+def create_field_string(fields):
+    field_string = ''
+    for j, field in enumerate(fields):
+        if isinstance(field, list):
+            field_string += 'm'
+            for i in range(len(field)):
+                field_string += str(field[i])
+                if i + 1 < len(field):
+                    field_string += 'x'
+        else:
+            field_string += str(field)
+        
+        if j + 1 < len(fields):
+            field_string += '_'
+    return field_string
+
+field_string = create_field_string(fields)
+print("All fields: ", generate_field_list(field_string))
+
+for cells in numcells:
+    for path in paths:
+        create_submit_script(cells, path)
+        submit_batch()

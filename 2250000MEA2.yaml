@@ -1,0 +1,11 @@
+description: 'Ziad: 2250000-electrode MEA with 2 um pitch'
+dim:
+- 1500
+- 1500
+electrode_name: 2250000MEA2
+pitch: 2
+shape: circle
+size: 1
+sortlist: null
+stagger: 0
+type: mea

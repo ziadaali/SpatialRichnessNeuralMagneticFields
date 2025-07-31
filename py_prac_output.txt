@@ -1,0 +1,869 @@
+Kilosort3 Testing
+KILOSORT PATH:  None
+Beginning Ground Truth Study
+MEArecRecordingExtractor called
+
+NeoIOClass:  <class 'neo.rawio.mearecrawio.MEArecRawIO'>
+Neo file:  /home/users/ziadaali/.local/lib/python3.6/site-packages/neo/__init__.py
+_parse_header magnetic_dim:  -1
+Returning mag_recordings in MEArec tools file
+MEArec tools mag_scale_factor:  <HDF5 dataset "mag_scale_factor": shape (3,), type "<f8">
+Electric recordings max =  160.24792
+Recordings shape:  (640000, 100)
+Recordings shape:  (640000, 100)
+MEArecSortingExtractor called
+
+NeoIOClass:  <class 'neo.rawio.mearecrawio.MEArecRawIO'>
+Neo file:  /home/users/ziadaali/.local/lib/python3.6/site-packages/neo/__init__.py
+_parse_header magnetic_dim:  -1
+Returning mag_recordings in MEArec tools file
+MEArec tools mag_scale_factor:  <HDF5 dataset "mag_scale_factor": shape (3,), type "<f8">
+Electric recordings max =  160.24792
+Recordings shape:  (640000, 100)
+Recordings shape:  (640000, 100)
+Setting KILOSORT2_PATH environment variable for subprocess calls to: /home/users/ziadaali/SpikeSorting/Kilosort-2.0
+BaseExtractor save called
+save_to_folder called in Base
+BaseExtractor save called
+save_to_folder called in Base
+BaseRecording save called
+Write_binary_recording called in BaseRecording
+write_binary_recording self:  MEArecRecordingExtractor: 100 channels - 1 segments - 32.0kHz - 20.000s
+  file_path: /home/groups/adapoon/ziad/SpikeSorting/MEArecRecordings/test/all_recordings_10cells_20s_noise5_9.h5
+write_binary_recording in CoreTools milestone
+recording in write_binary_recording:  MEArecRecordingExtractor: 100 channels - 1 segments - 32.0kHz - 20.000s
+  file_path: /home/groups/adapoon/ziad/SpikeSorting/MEArecRecordings/test/all_recordings_10cells_20s_noise5_9.h5
+recording.to_dict() in write_binary_recording:  {'file_path': '/home/groups/adapoon/ziad/SpikeSorting/MEArecRecordings/test/all_recordings_10cells_20s_noise5_9.h5', 'locs_2d': True}
+write_binary_recording with n_jobs 1  chunk_size None
+Loading extractor in _init_binary_worker in CoreTools
+Recording in _init_binary_worker:  {'file_path': '/home/groups/adapoon/ziad/SpikeSorting/MEArecRecordings/test/all_recordings_10cells_20s_noise5_9.h5', 'locs_2d': True}
+_load_extractor_from_dict in Base called
+Cls:  <class 'spikeinterface.extractors.neoextractors.mearec.MEArecRecordingExtractor'>
+kwargs:  {'file_path': '/home/groups/adapoon/ziad/SpikeSorting/MEArecRecordings/test/all_recordings_10cells_20s_noise5_9.h5', 'locs_2d': True}
+MEArecRecordingExtractor called
+
+NeoIOClass:  <class 'neo.rawio.mearecrawio.MEArecRawIO'>
+Neo file:  /home/users/ziadaali/.local/lib/python3.6/site-packages/neo/__init__.py
+_parse_header magnetic_dim:  -1
+Returning mag_recordings in MEArec tools file
+MEArec tools mag_scale_factor:  <HDF5 dataset "mag_scale_factor": shape (3,), type "<f8">
+Electric recordings max =  160.24792
+Recordings shape:  (640000, 100)
+Recordings shape:  (640000, 100)
+Write_binary_recording finished in BaseRecording
+Calling BinaryRecordingExtractor
+BinaryRecordingExtractor init
+_load_extractor_from_dict in Base called
+Cls:  <class 'spikeinterface.core.binaryrecordingextractor.BinaryRecordingExtractor'>
+kwargs:  {'file_paths': ['/home/users/ziadaali/SpikeSorting/StudyFolder/raw_files/rec0/traces_cached_seg0.raw'], 'sampling_frequency': 32000.0, 'num_chan': 100, 'dtype': '<f4', 'channel_ids': array(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+       '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23',
+       '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34',
+       '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45',
+       '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56',
+       '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67',
+       '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78',
+       '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89',
+       '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100'],
+      dtype='<U64'), 'time_axis': 0, 'file_offset': 0, 'gain_to_uV': array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]), 'offset_to_uV': array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), 'is_filtered': None}
+BinaryRecordingExtractor init
+Study Tools: GET_RECORDINGS CALLED
+_load_extractor_from_dict in Base called
+Cls:  <class 'spikeinterface.core.binaryrecordingextractor.BinaryRecordingExtractor'>
+kwargs:  {'file_paths': ['/home/users/ziadaali/SpikeSorting/StudyFolder/raw_files/rec0/traces_cached_seg0.raw'], 'sampling_frequency': 32000.0, 'num_chan': 100, 'dtype': '<f4', 'channel_ids': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100'], 'time_axis': 0, 'file_offset': 0, 'gain_to_uV': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'offset_to_uV': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'is_filtered': None}
+BinaryRecordingExtractor init
+Ziad Added, Sorter Params _run_one:  {}
+Ziad Added, Sorter Params run_sorter_local:  {}
+Setup Recording - Kilosort2
+write_binary_recording in CoreTools milestone
+recording in write_binary_recording:  BinaryRecordingExtractor: 100 channels - 1 segments - 32.0kHz - 20.000s
+  file_paths: ['/home/users/ziadaali/SpikeSorting/StudyFolder/raw_files/rec0/traces_cached_seg0.raw']
+recording.to_dict() in write_binary_recording:  {'file_paths': ['/home/users/ziadaali/SpikeSorting/StudyFolder/raw_files/rec0/traces_cached_seg0.raw'], 'sampling_frequency': 32000.0, 'num_chan': 100, 'dtype': '<f4', 'channel_ids': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100'], 'time_axis': 0, 'file_offset': 0, 'gain_to_uV': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'offset_to_uV': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'is_filtered': None}
+write_binary_recording:   0%|          | 0/1 [00:00<?, ?it/s]write_binary_recording: 100%|##########| 1/1 [00:03<00:00,  3.20s/it]write_binary_recording: 100%|##########| 1/1 [00:03<00:00,  3.20s/it]
+Loading extractor in _init_binary_worker in CoreTools
+Recording in _init_binary_worker:  {'file_paths': ['/home/users/ziadaali/SpikeSorting/StudyFolder/raw_files/rec0/traces_cached_seg0.raw'], 'sampling_frequency': 32000.0, 'num_chan': 100, 'dtype': '<f4', 'channel_ids': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100'], 'time_axis': 0, 'file_offset': 0, 'gain_to_uV': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'offset_to_uV': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'is_filtered': None}
+_load_extractor_from_dict in Base called
+Cls:  <class 'spikeinterface.core.binaryrecordingextractor.BinaryRecordingExtractor'>
+kwargs:  {'file_paths': ['/home/users/ziadaali/SpikeSorting/StudyFolder/raw_files/rec0/traces_cached_seg0.raw'], 'sampling_frequency': 32000.0, 'num_chan': 100, 'dtype': '<f4', 'channel_ids': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100'], 'time_axis': 0, 'file_offset': 0, 'gain_to_uV': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'offset_to_uV': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'is_filtered': None}
+BinaryRecordingExtractor init
+Running sorter:  kilosort2
+KilosortBase._run_from_folder <class 'spikeinterface.sorters.kilosort2.kilosort2.Kilosort2Sorter'>
+Sorter:  kilosort2
+RUNNING SHELL SCRIPT: /home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2/run_kilosort2.sh
+
+
+                            < M A T L A B (R) >
+
+                  Copyright 1984-2020 The MathWorks, Inc.
+
+              R2020a Update 4 (9.8.0.1417392) 64-bit (glnxa64)
+
+                               June 24, 2020
+
+
+
+[Warning: Unrecognized command line option: wait.] 
+
+
+
+                            < M A T L A B (R) >
+
+                  Copyright 1984-2020 The MathWorks, Inc.
+
+              R2020a Update 4 (9.8.0.1417392) 64-bit (glnxa64)
+
+                               June 24, 2020
+
+
+
+[Warning: Unrecognized command line option: wait.] 
+
+ 
+
+ 
+
+To get started, type doc.
+
+To get started, type doc.
+
+For product information, visit www.mathworks.com.
+
+For product information, visit www.mathworks.com.
+
+ 
+
+ 
+
+Beginning kilosort2_master.m execution 
+
+Beginning kilosort2_master.m execution 
+
+Step 1 
+
+Step 1 
+
+Step 1.1 
+
+Step 1.1 
+
+Step 1.2 
+
+Step 1.2 
+
+Saving chanMap.mat 
+
+Saving chanMap.mat 
+
+Saved chanMap.mat 
+
+Saved chanMap.mat 
+
+Step 2 
+
+Step 2 
+
+ops.lam: ops.lam: 
+
+ans =
+
+
+
+    10
+
+
+
+
+
+ans =
+
+
+
+    10
+
+
+
+
+
+
+
+ops.AUCsplit: ops.AUCsplit: 
+
+ans =
+
+
+
+    0.9000
+
+
+
+
+
+ans =
+
+
+
+    0.9000
+
+
+
+
+
+
+
+Step 3 
+
+Step 3 
+
+Function: preprocessDataSub
+
+Function: preprocessDataSub
+
+
+
+ops = 
+
+
+
+  struct with fields:
+
+
+
+              NchanTOT: 100
+
+                 Nchan: 100
+
+                    fs: 32000
+
+              datatype: 'dat'
+
+               fbinary: '/home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2/recording.dat'
+
+                 fproc: '/home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2/temp_wh.dat'
+
+                  root: '/home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2'
+
+               chanMap: 'chanMap.mat'
+
+                fshigh: 150
+
+    minfr_goodchannels: 0.1000
+
+                    Th: [10 4]
+
+              spkThPos: 0
+
+                   lam: 10
+
+              AUCsplit: 0.9000
+
+                 minFR: 0.1000
+
+              momentum: [20 400]
+
+             sigmaMask: 30
+
+                 ThPre: 8
+
+                 spkTh: -6
+
+               reorder: 1
+
+                 nskip: 25
+
+                   CAR: 1
+
+                   GPU: 1
+
+          nfilt_factor: 4
+
+                ntbuff: 64
+
+                    NT: 65600
+
+        whiteningRange: 32
+
+              nSkipCov: 25
+
+             scaleproc: 200
+
+                  nPCs: 3
+
+                useRAM: 0
+
+                trange: [0 Inf]
+
+                   nt0: 61
+
+                nt0min: 20
+
+                tstart: 0
+
+                  tend: 640000
+
+           sampsToRead: 640000
+
+                 twind: 0
+
+                Nbatch: 10
+
+
+
+
+
+ops = 
+
+
+
+  struct with fields:
+
+
+
+              NchanTOT: 100
+
+                 Nchan: 100
+
+                    fs: 32000
+
+              datatype: 'dat'
+
+               fbinary: '/home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2/recording.dat'
+
+                 fproc: '/home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2/temp_wh.dat'
+
+                  root: '/home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2'
+
+               chanMap: 'chanMap.mat'
+
+                fshigh: 150
+
+    minfr_goodchannels: 0.1000
+
+                    Th: [10 4]
+
+              spkThPos: 0
+
+                   lam: 10
+
+              AUCsplit: 0.9000
+
+                 minFR: 0.1000
+
+              momentum: [20 400]
+
+             sigmaMask: 30
+
+                 ThPre: 8
+
+                 spkTh: -6
+
+               reorder: 1
+
+                 nskip: 25
+
+                   CAR: 1
+
+                   GPU: 1
+
+          nfilt_factor: 4
+
+                ntbuff: 64
+
+                    NT: 65600
+
+        whiteningRange: 32
+
+              nSkipCov: 25
+
+             scaleproc: 200
+
+                  nPCs: 3
+
+                useRAM: 0
+
+                trange: [0 Inf]
+
+                   nt0: 61
+
+                nt0min: 20
+
+                tstart: 0
+
+                  tend: 640000
+
+           sampsToRead: 640000
+
+                 twind: 0
+
+                Nbatch: 10
+
+
+
+Time   1s. Determining good channels.. 
+
+Time   1s. Determining good channels.. 
+
+
+
+k =
+
+
+
+   266
+
+
+
+
+
+k =
+
+
+
+   266
+
+
+
+
+
+k =
+
+
+
+   613
+
+
+
+
+
+k =
+
+
+
+   613
+
+
+
+
+
+k =
+
+
+
+        1023
+
+
+
+
+
+k =
+
+
+
+        1023
+
+
+
+
+
+k =
+
+
+
+        1344
+
+
+
+
+
+k =
+
+
+
+        1344
+
+
+
+
+
+k =
+
+
+
+        1701
+
+
+
+
+
+k =
+
+
+
+        1701
+
+
+
+
+
+k =
+
+
+
+        2071
+
+
+
+
+
+k =
+
+
+
+        2071
+
+
+
+
+
+k =
+
+
+
+        2406
+
+
+
+
+
+k =
+
+
+
+        2406
+
+
+
+
+
+k =
+
+
+
+        2761
+
+
+
+
+
+k =
+
+
+
+        2761
+
+
+
+
+
+k =
+
+
+
+        3112
+
+
+
+
+
+k =
+
+
+
+        3112
+
+
+
+
+
+k =
+
+
+
+        3347
+
+
+
+
+
+k =
+
+
+
+        3347
+
+
+
+found 3347 threshold crossings in 20.00 seconds of data 
+
+found 3347 threshold crossings in 20.00 seconds of data 
+
+found 51 bad channels 
+
+found 51 bad channels 
+
+Time  68s. Computing whitening matrix.. 
+
+Time  68s. Computing whitening matrix.. 
+
+Getting channel whitening matrix... 
+
+Getting channel whitening matrix... 
+
+Channel-whitening matrix computed. 
+
+Channel-whitening matrix computed. 
+
+Time  72s. Loading raw data and applying filters... 
+
+Time  72s. Loading raw data and applying filters... 
+
+Time 105s. Finished preprocessing 10 batches. 
+
+Time 105s. Finished preprocessing 10 batches. 
+
+kilosort2_master.m finished preprocessDataSub functionkilosort2_master.m finished preprocessDataSub functionrandom seed for clusterSingleBatches: 1
+
+random seed for clusterSingleBatches: 1
+
+Obtained 7 PC waveforms in 0.85 seconds 
+
+Obtained 7 PC waveforms in 0.85 seconds 
+
+extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermtime 0.62, pre clustered 1 / 10 batches 
+
+time 0.62, pre clustered 1 / 10 batches 
+
+extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermextractPCbatch2 spTh variable passed to mexThSpkPC 8.000000extractPCbatch2 spTh variable passed to mexThSpkPC 8.000000Running initializeWdata2 randpermRunning initializeWdata2 randpermtime 0.23, compared 1 / 10 batches 
+
+time 0.23, compared 1 / 10 batches 
+
+time 8.85, Re-ordered 10 batches. 
+
+time 8.85, Re-ordered 10 batches. 
+
+Size clips: Size clips: 
+
+ans =
+
+
+
+    61     1    44
+
+
+
+
+
+ans =
+
+
+
+    61     1    44
+
+
+
+
+
+
+
+Size c: Size c: 
+
+ans =
+
+
+
+    61    44
+
+
+
+
+
+ans =
+
+
+
+    61    44
+
+
+
+
+
+
+
+k: k: 
+
+k =
+
+
+
+    44
+
+
+
+
+
+k =
+
+
+
+    44
+
+
+
+
+
+ Running extractTemplates randperm 
+
+
+
+ Running extractTemplates randperm 
+
+   Size dd:    Size dd: 
+
+ans =
+
+
+
+    61    44
+
+
+
+
+
+ans =
+
+
+
+    61    44
+
+
+
+
+
+ nPCs: 
+
+ nPCs: 
+
+nPCs =
+
+
+
+     6
+
+
+
+
+
+nPCs =
+
+
+
+     6
+
+
+
+
+
+
+
+Time  10s. Optimizing templates ...
+
+Time  10s. Optimizing templates ...
+
+10.85 sec, 1 / 10 batches, 11 units, nspks: 4.4038, mu: 10.0000, nst0: 45, merges: 0.0000, 0.1000 
+
+10.85 sec, 1 / 10 batches, 11 units, nspks: 4.4038, mu: 10.0000, nst0: 45, merges: 0.0000, 0.1000 
+
+Elapsed time is 11.588684 seconds.
+
+Elapsed time is 11.588684 seconds.
+
+Finished learning templates 
+
+Finished learning templates 
+
+Time  12s. Optimizing templates ...
+
+Time  12s. Optimizing templates ...
+
+11.78 sec, 1 / 5 batches, 44 units, nspks: 13.9000, mu: 22.3858, nst0: 314 
+
+11.78 sec, 1 / 5 batches, 44 units, nspks: 13.9000, mu: 22.3858, nst0: 314 
+
+Elapsed time is 12.048364 seconds.
+
+Elapsed time is 12.048364 seconds.
+
+Time  12s. Optimizing templates ...
+
+Time  12s. Optimizing templates ...
+
+12.09 sec, 1 / 5 batches, 44 units, nspks: 7.8500, mu: 22.3858, nst0: 176 
+
+12.09 sec, 1 / 5 batches, 44 units, nspks: 7.8500, mu: 22.3858, nst0: 176 
+
+Elapsed time is 12.162312 seconds.
+
+Elapsed time is 12.162312 seconds.
+
+Number of spikes before applying cutoff: 2466
+
+Number of spikes before applying cutoff: 2466
+
+Finished compressing time-varying templates 
+
+Finished compressing time-varying templates 
+
+initialized spike counts
+
+initialized spike counts
+
+Found 0 splits, checked 1/44 clusters, nccg 0 
+
+Found 0 splits, checked 1/44 clusters, nccg 0 
+
+Finished splitting. Found 0 splits, checked 44/44 clusters, nccg 0 
+
+Finished splitting. Found 0 splits, checked 44/44 clusters, nccg 0 
+
+Found 0 splits, checked 1/44 clusters, nccg 0 
+
+Found 0 splits, checked 1/44 clusters, nccg 0 
+
+Finished splitting. Found 0 splits, checked 44/44 clusters, nccg 0 
+
+Finished splitting. Found 0 splits, checked 44/44 clusters, nccg 0 
+
+Removing 330 spikes from rez structure.
+
+Removing 330 spikes from rez structure.
+
+found 14 good units 
+
+found 14 good units 
+
+Saving results to Phy  
+
+Saving results to Phy  
+
+kilosort2 run time 130.07s
+Run Time:  130.0666940137744
+Output Folder:  /home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2
+Copy Sortings rec_name, sorter_name, output_folder:  rec0 kilosort2 /home/users/ziadaali/SpikeSorting/StudyFolder/sorter_folders/rec0/kilosort2

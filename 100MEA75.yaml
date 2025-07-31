@@ -1,0 +1,9 @@
+description: 'Ziad: 100-electrode MEA with 75 um pitch'
+dim: 10
+electrode_name: 100MEA75
+pitch: 75.0
+shape: circle
+size: 5
+sortlist: null
+stagger: 0
+type: mea
